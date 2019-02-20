@@ -1,0 +1,4 @@
+app : ce qui est propre a mon appli
+
+gestion des classes de l'appli,
+des controllers.

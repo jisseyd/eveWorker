@@ -1,0 +1,207 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14 févr. 2019, 11:02:54
+    Author     : imac
+*/
+
+/* version develloppement*/
+
+*/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 janv. 2019, 15:49:22
+    Author     : imac
+*/
+*{
+    color: #cccccc;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style: none none;
+    box-sizing: border-box;
+}
+
+body{
+    background-image : url("../pictures/evePI.png");
+    background-size: cover;
+    background-attachment: fixed;
+    color: whitesmoke;
+    /* Création d'un contour noir autour des lettres la répetition de l'ombrage en augmente la densité'*/
+    /*text-shadow: 0 0 4px #000, 0 0 4px #000, 0 0 14px #000 ;*/
+    font-weight: lighter;
+    /*font-family:"Andale mono", Avenir, sans-serif;*/
+    font-family:Eurostyle, Skia, Candara, Sevarek;
+    /*font-family: Shentox-light,Rogan-light,ProximaNova-Light,Arial,sans-serif;*/
+}
+
+nav, #contenu{
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto;
+    width: 75%;
+    border: 1px solid rgba(137, 93, 118, 0.5);
+    border-radius: 15px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 60px;
+    background-color: rgba(0,0,0,0.5);
+}
+nav h1{
+    margin: 0 auto;
+    font-size: 5em;
+}
+nav a{
+    margin: 0 10px;
+}
+.connect{
+    z-index: 10;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+#modale, #modale2{
+    display: none;
+    position: fixed;
+    top:0; right:0; bottom:0; left:0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+#modale:target, #modale2:target{
+    display: block;
+}
+.popup{    
+    background-color: rgba(155,106,164,0.7);
+    padding: 20px;
+    /*position: relative;*/
+    margin: 150px auto;
+    min-width: 150px;
+    width: 30%;
+    /*height: 120px;*/
+    border: 1px  #660000 solid;
+    border-radius: 15px;
+    border-top-right-radius: 0px;
+    font-size: 20px;  
+}
+.popup form{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+.popup form label,.popup form input{
+    width: 75%;
+    margin: 0px auto;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px; 
+    background-color: rgba(0,0,0,0.4);
+}
+.popup form input[type = 'submit']{
+    border-radius: 20 px;
+    width: 60%;
+    height: 25px;
+}
+.popup form input[id = 'pseudo']{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-bottom:0px;
+}
+.popup form input[id = 'connection'],.popup form input[id = 'pass']{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-top:0px;
+}
+.popup form input[id = 'connection']{    
+    width: 60%;
+    height:30px;
+}
+input[id = 'logout']{    
+    margin-left: 10px;
+}
+
+.close {
+    float: right;
+    width: 30px;
+    height: 30px;
+    margin: -52px -20px 0 0;
+    padding: 5px;
+    background-color: rgba(155,106,164,0.3);
+    border-top : 1px  #660000 solid;
+    border-left: 1px  #660000 solid;
+    border-right: 1px  #660000 solid;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    text-align: center;
+    margin: 10px auto;
+}
+#contenu, #message{
+    width: 90%;
+    margin: 5px auto;
+    flex-direction: column;
+    text-align: center;
+}
+
+#contenu p{
+    margin: 5px auto;
+}
+
+#message{
+    width: 60%;
+    border: none;
+    height: 30px;
+    padding : 3px 
+}
+
+.error{
+    border: 1px #ff0033 solid !important;
+    border-radius: 10px;
+    
+box-shadow:0px 0px 10px #ff0033;
+-webkit-animation-name: clignote; 
+-webkit-animation-duration: 1s;
+-webkit-animation-iteration-count:infinite;
+}
+
+@-webkit-keyframes clignote {
+    
+0%{box-shadow:0px 0px 15px #ff0033;}
+50%{box-shadow:0px 0px 0px #ff0033;}
+100%{box-shadow:0px 0px 10px #ff0033;}
+}
+
+.valid{
+    border: 1px #00cc33 solid !important;
+    border-radius: 10px;
+    
+}
+
+table{
+    border-collapse: collapse;
+    border: 1px solid #00cc33;
+    margin: 0px auto;
+    
+}
+
+th, td{
+    padding: 2px;
+    width: 70px;
+    border: 1px solid #00cc33;
+    font-weight: lighter;
+    text-align: center;
+}

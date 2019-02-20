@@ -1,0 +1,1 @@
+core : ce qui pourra être réutilisé pour d'autre appli
