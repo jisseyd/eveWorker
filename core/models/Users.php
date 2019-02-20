@@ -209,7 +209,7 @@ class Users extends elementsManager{
                 throw new Exception('vous devez indiquer une adresse mail valide');
             }
             $id = htmlspecialchars($_POST['ligneId']);
-            $this->getdb()->prepare('UPDATE user SET pseudo = :pseudo, pass=:pass WHERE id = :id ', [':pseudo'=>$pseudo,':pass'=>$pass, ':id'=>$id]);
+            $this->getdb()->prepare('UPDATE user SET pseudo = :pseudo, pass=:pass, mail = :mail WHERE id = :id ', [':pseudo'=>$pseudo,':pass'=>$pass, ':id'=>$id]);
             $_SESSION['user']= $pseudo;
             $_SESSION['role']=$role;
             $_SESSION['pass']=$pass;            
