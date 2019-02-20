@@ -218,7 +218,7 @@ class Users extends elementsManager{
         
         if(isset($_POST['sup'])):
             ?>
-            ok on supprime
+            ok on supprime TOUT CE SUI A ÉTÉ AJOUTÉ
 
             <?php
                     endif;
